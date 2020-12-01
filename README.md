@@ -10,4 +10,9 @@ Add the dependency to Package.swift:
 ~~~~swift
 dependencies: [
     ...
-    .package(url: "https://github.com/dylanshin
+    .package(url: "https://github.com/dylanshine/openai-kit.git", from: "1.0.0")
+],
+targets: [
+    .target(name: "App", dependencies: [
+        .product(name: "OpenAIKit", package: "openai-kit"),
+    ])
