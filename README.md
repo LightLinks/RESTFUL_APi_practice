@@ -15,4 +15,7 @@ dependencies: [
 targets: [
     .target(name: "App", dependencies: [
         .product(name: "OpenAIKit", package: "openai-kit"),
-    ])
+    ]),
+~~~~
+
+It is encouraged to use environment variables to inject the OpenAI API key, instead of hardcoding it in the source code.
