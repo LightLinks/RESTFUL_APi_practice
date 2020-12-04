@@ -26,4 +26,4 @@ It is encouraged to use environment variables to inject the OpenAI API key, inst
 OPENAI_API_KEY="YOUR-API-KEY"
 OPENAI_ORGANIZATION="YOUR-ORGANIZATION"
 ~~~~
-⚠️ OpenAI strongly recommends developers of client-side appli
+⚠️ OpenAI strongly recommends developers of client-side applications proxy requests through a separate backend service to keep their API key safe. API keys can access and manipulate customer billi
