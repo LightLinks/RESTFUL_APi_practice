@@ -28,4 +28,13 @@ OPENAI_ORGANIZATION="YOUR-ORGANIZATION"
 ~~~~
 ⚠️ OpenAI strongly recommends developers of client-side applications proxy requests through a separate backend service to keep their API key safe. API keys can access and manipulate customer billing, usage, and organizational data, so it's a significant risk to [expose](https://nshipster.com/secrets/) them.
 
-Create a `OpenAIKit.Client` using a httpClient and confi
+Create a `OpenAIKit.Client` using a httpClient and configuration.
+
+~~~~swift
+
+var apiKey: String {
+    ProcessInfo.processInfo.environment["OPENAI_API_KEY"]!
+}
+
+var organization: String {
+    ProcessInfo.processInfo.environm
