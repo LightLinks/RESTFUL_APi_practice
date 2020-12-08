@@ -37,4 +37,10 @@ var apiKey: String {
 }
 
 var organization: String {
-    ProcessInfo.processInfo.environm
+    ProcessInfo.processInfo.environment["OPENAI_ORGANIZATION"]!
+}
+
+...
+
+let httpClient = HTTPClient(eventLoopGroupProvider: .createNew)
+let configuration = Configuration(apiKey: a
