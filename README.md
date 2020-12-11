@@ -43,4 +43,9 @@ var organization: String {
 ...
 
 let httpClient = HTTPClient(eventLoopGroupProvider: .createNew)
-let configuration = Configuration(apiKey: a
+let configuration = Configuration(apiKey: apiKey, organization: organization)
+
+let openAIClient = OpenAIKit.Client(httpClient: httpClient, configuration: configuration)
+~~~~
+
+## Using th
