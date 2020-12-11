@@ -48,4 +48,11 @@ let configuration = Configuration(apiKey: apiKey, organization: organization)
 let openAIClient = OpenAIKit.Client(httpClient: httpClient, configuration: configuration)
 ~~~~
 
-## Using th
+## Using the API
+
+The OpenAIKit.Client implements a handful of methods to interact with the OpenAI API:
+
+~~~~swift
+import OpenAIKit
+
+let completion = try await openAIClient
