@@ -64,4 +64,6 @@ let completion = try await openAIClient.completions.create(
 ### What's Implemented
 * [x] [Models](https://beta.openai.com/docs/api-reference/models)
 * [x] [Completions](https://beta.openai.com/docs/api-reference/completions)
-* [x] [Edits](https://beta.openai.com/
+* [x] [Edits](https://beta.openai.com/docs/api-reference/edits)
+* [x] [Images](https://beta.openai.com/docs/api-reference/images)
+* [x] [Embeddings](https://beta.openai.com/docs/api-reference/
