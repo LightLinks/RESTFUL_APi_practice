@@ -68,4 +68,9 @@ let completion = try await openAIClient.completions.create(
 * [x] [Images](https://beta.openai.com/docs/api-reference/images)
 * [x] [Embeddings](https://beta.openai.com/docs/api-reference/embeddings)
 * [x] [Files](https://beta.openai.com/docs/api-reference/files)
-* [x] [Moderations](https://beta.openai.com/docs/api-reference/moder
+* [x] [Moderations](https://beta.openai.com/docs/api-reference/moderations)
+* [ ] [Fine-tunes](https://beta.openai.com/docs/api-reference/fine-tunes)
+
+
+## Error handling
+If the request to the API failed for any
