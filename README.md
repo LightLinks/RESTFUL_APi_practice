@@ -79,4 +79,7 @@ Simply ensure you catch errors thrown like any other throwing function
 ~~~~swift
 do {
    ...
-} catch le
+} catch let error as APIErrorResponse {
+    print(error)
+}
+~~~~
