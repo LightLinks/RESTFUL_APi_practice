@@ -5,4 +5,11 @@ import Foundation
  */
 public struct Chat {
     public let id: String
-    public let obj
+    public let object: String
+    public let created: Date
+    public let model: String
+    public let choices: [Choice]
+    public let usage: Usage
+}
+
+exten
