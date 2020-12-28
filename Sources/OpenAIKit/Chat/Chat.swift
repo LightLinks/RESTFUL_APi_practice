@@ -18,4 +18,13 @@ extension Chat {
     public struct Choice {
         public let index: Int
         public let message: Message
+        public let finishReason: String?
+    }
+}
+
+extension Chat.Choice: Codable {}
+
+extension Chat {
+    public struct Message {
+        public let role: String
         pub
