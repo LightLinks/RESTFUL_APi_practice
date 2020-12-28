@@ -12,4 +12,10 @@ public struct Chat {
     public let usage: Usage
 }
 
-exten
+extension Chat: Codable {}
+
+extension Chat {
+    public struct Choice {
+        public let index: Int
+        public let message: Message
+        pub
