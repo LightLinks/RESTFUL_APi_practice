@@ -27,4 +27,8 @@ extension Chat.Choice: Codable {}
 extension Chat {
     public struct Message {
         public let role: String
-        pub
+        public let content: String
+        public init(role: String, content: String) {
+            self.role = role
+            self.content = content
+  
