@@ -31,4 +31,8 @@ extension Chat {
         public init(role: String, content: String) {
             self.role = role
             self.content = content
-  
+        }
+    }
+}
+
+extension Chat.Message: Codable {}
