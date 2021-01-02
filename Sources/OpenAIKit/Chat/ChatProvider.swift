@@ -10,4 +10,10 @@ public struct ChatProvider {
      Create chat completion
      POST
       
-     https://api.openai.com/v1
+     https://api.openai.com/v1/chat/completions
+
+     Creates a chat completion for the provided prompt and parameters
+     */
+    public func create(
+        model: ModelID,
+        me
