@@ -16,4 +16,9 @@ public struct ChatProvider {
      */
     public func create(
         model: ModelID,
-        me
+        messages: [Chat.Message] = [],
+        temperature: Double = 1.0,
+        topP: Double = 1.0,
+        n: Int = 1,
+        stream: Bool = false,
+     
