@@ -21,4 +21,7 @@ public struct ChatProvider {
         topP: Double = 1.0,
         n: Int = 1,
         stream: Bool = false,
-     
+        stops: [String] = [],
+        maxTokens: Int? = nil,
+        presencePenalty: Double = 0.0,
+        frequencyPenalty: Double = 0.0
