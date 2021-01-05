@@ -24,4 +24,9 @@ public struct ChatProvider {
         stops: [String] = [],
         maxTokens: Int? = nil,
         presencePenalty: Double = 0.0,
-        frequencyPenalty: Double = 0.0
+        frequencyPenalty: Double = 0.0,
+        logitBias: [String : Int] = [:],
+        user: String? = nil
+    ) async throws -> Chat {
+        
+        let request = try CreateChatRequ
