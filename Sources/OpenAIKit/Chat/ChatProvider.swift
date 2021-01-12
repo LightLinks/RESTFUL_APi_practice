@@ -29,4 +29,10 @@ public struct ChatProvider {
         user: String? = nil
     ) async throws -> Chat {
         
-        let request = try CreateChatRequ
+        let request = try CreateChatRequest(
+            model: model.id,
+            messages: messages,
+            temperature: temperature,
+            topP: topP,
+            n: n,
+            stream: st
