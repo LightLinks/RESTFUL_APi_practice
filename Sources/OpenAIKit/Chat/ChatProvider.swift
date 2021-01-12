@@ -35,4 +35,9 @@ public struct ChatProvider {
             temperature: temperature,
             topP: topP,
             n: n,
-            stream: st
+            stream: stream,
+            stops: stops,
+            maxTokens: maxTokens,
+            presencePenalty: presencePenalty,
+            frequencyPenalty: frequencyPenalty,
+    
