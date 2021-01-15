@@ -45,4 +45,7 @@ public struct ChatProvider {
         )
         let chat: Chat = try await requestHandler.perform(request: request)
         
-       
+        return chat
+        
+    }
+}
