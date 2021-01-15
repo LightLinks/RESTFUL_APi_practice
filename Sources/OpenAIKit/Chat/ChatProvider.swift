@@ -40,4 +40,9 @@ public struct ChatProvider {
             maxTokens: maxTokens,
             presencePenalty: presencePenalty,
             frequencyPenalty: frequencyPenalty,
-    
+            logitBias: logitBias,
+            user: user
+        )
+        let chat: Chat = try await requestHandler.perform(request: request)
+        
+       
