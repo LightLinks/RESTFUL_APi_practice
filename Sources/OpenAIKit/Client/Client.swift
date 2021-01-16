@@ -25,3 +25,15 @@ public struct Client {
             configuration: configuration
         )
                 
+        self.models = ModelProvider(requestHandler: requestHandler)
+        self.completions = CompletionProvider(requestHandler: requestHandler)
+        self.chats = ChatProvider(requestHandler: requestHandler)
+        self.edits = EditProvider(requestHandler: requestHandler)
+        self.images = ImageProvider(requestHandler: requestHandler)
+        self.embeddings = EmbeddingProvider(requestHandler: requestHandler)
+        self.files = FileProvider(requestHandler: requestHandler)
+        self.moderations = ModerationProvider(requestHandler: requestHandler)
+        
+    }
+
+}
