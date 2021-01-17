@@ -19,4 +19,12 @@ extension Completion {
         public let text: String
         public let index: Int
         public let logprobs: Logprobs?
-        public le
+        public let finishReason: String?
+    }
+}
+
+extension Completion.Choice: Codable {}
+
+extension Completion.Choice {
+    public struct Logprobs {
+        public l
