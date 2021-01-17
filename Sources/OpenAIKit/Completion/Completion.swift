@@ -6,4 +6,13 @@ import Foundation
 public struct Completion {
     public let id: String
     public let object: String
-    public 
+    public let created: Date
+    public let model: String
+    public let choices: [Choice]
+    public let usage: Usage
+}
+
+extension Completion: Codable {}
+
+extension Completion {
+    public struct C
