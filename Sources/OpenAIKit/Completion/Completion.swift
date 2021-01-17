@@ -15,4 +15,8 @@ public struct Completion {
 extension Completion: Codable {}
 
 extension Completion {
-    public struct C
+    public struct Choice {
+        public let text: String
+        public let index: Int
+        public let logprobs: Logprobs?
+        public le
