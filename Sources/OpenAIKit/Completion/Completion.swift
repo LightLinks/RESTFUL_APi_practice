@@ -27,4 +27,7 @@ extension Completion.Choice: Codable {}
 
 extension Completion.Choice {
     public struct Logprobs {
-        public l
+        public let tokens: [String]
+        public let tokenLogprobs: [Float]
+        public let topLogprobs: [String: Float]
+        public let textOffset: 
