@@ -30,4 +30,10 @@ extension Completion.Choice {
         public let tokens: [String]
         public let tokenLogprobs: [Float]
         public let topLogprobs: [String: Float]
-        public let textOffset: 
+        public let textOffset: [Int]
+    }
+}
+
+extension Completion.Choice.Logprobs: Codable {
+    public init(from decoder: Decoder) throws {
+        let container = t
