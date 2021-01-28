@@ -36,4 +36,6 @@ extension Completion.Choice {
 
 extension Completion.Choice.Logprobs: Codable {
     public init(from decoder: Decoder) throws {
-        let container = t
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.tokens = try container.decodeIfPresent([String].self, forKey: .tokens) ?? []
+        self.tok
