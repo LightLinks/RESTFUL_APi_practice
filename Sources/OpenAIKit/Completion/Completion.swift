@@ -38,4 +38,5 @@ extension Completion.Choice.Logprobs: Codable {
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.tokens = try container.decodeIfPresent([String].self, forKey: .tokens) ?? []
-        self.tok
+        self.tokenLogprobs = try container.decodeIfPresent([Float].self, forKey: .tokenLogprobs) ?? []
+        self.topLogprobs = try container.decodeIfPresent([String: Float].self, forKey: .t
