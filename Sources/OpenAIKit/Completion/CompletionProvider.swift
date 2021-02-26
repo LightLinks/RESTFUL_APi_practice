@@ -29,4 +29,8 @@ public struct CompletionProvider {
         presencePenalty: Double = 0.0,
         frequencyPenalty: Double = 0.0,
         bestOf: Int = 1,
-    
+        logitBias: [String : Int] = [:],
+        user: String? = nil
+    ) async throws -> Completion {
+        
+        let request = try CreateCompletionRequest
