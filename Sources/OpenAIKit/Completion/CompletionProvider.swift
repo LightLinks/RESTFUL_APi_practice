@@ -24,4 +24,9 @@ public struct CompletionProvider {
         n: Int = 1,
         stream: Bool = false,
         logprobs: Int? = nil,
-        echo: Bool = f
+        echo: Bool = false,
+        stops: [String] = [],
+        presencePenalty: Double = 0.0,
+        frequencyPenalty: Double = 0.0,
+        bestOf: Int = 1,
+    
