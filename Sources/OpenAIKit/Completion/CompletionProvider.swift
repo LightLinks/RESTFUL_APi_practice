@@ -48,4 +48,11 @@ public struct CompletionProvider {
             presencePenalty: presencePenalty,
             frequencyPenalty: frequencyPenalty,
             bestOf: bestOf,
-            
+            logitBias: logitBias,
+            user: user
+        )
+        
+        return try await requestHandler.perform(request: request)
+        
+    }
+}
