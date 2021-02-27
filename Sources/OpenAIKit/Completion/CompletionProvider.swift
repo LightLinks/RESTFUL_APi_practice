@@ -38,4 +38,10 @@ public struct CompletionProvider {
             prompts: prompts,
             suffix: suffix,
             maxTokens: maxTokens,
-            temper
+            temperature: temperature,
+            topP: topP,
+            n: n,
+            stream: stream,
+            logprobs: logprobs,
+            echo: echo,
+    
