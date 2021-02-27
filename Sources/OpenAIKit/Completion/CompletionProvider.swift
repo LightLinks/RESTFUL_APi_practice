@@ -44,4 +44,8 @@ public struct CompletionProvider {
             stream: stream,
             logprobs: logprobs,
             echo: echo,
-    
+            stops: stops,
+            presencePenalty: presencePenalty,
+            frequencyPenalty: frequencyPenalty,
+            bestOf: bestOf,
+            
