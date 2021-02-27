@@ -33,4 +33,9 @@ public struct CompletionProvider {
         user: String? = nil
     ) async throws -> Completion {
         
-        let request = try CreateCompletionRequest
+        let request = try CreateCompletionRequest(
+            model: model.id,
+            prompts: prompts,
+            suffix: suffix,
+            maxTokens: maxTokens,
+            temper
