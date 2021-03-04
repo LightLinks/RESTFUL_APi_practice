@@ -5,4 +5,11 @@ import Foundation
 struct CreateCompletionRequest: Request {
     let method: HTTPMethod = .POST
     let path = "/v1/completions"
-   
+    let body: HTTPClient.Body?
+    
+    init(
+        model: String,
+        prompts: [String],
+        suffix: String?,
+        maxTokens: Int,
+    
