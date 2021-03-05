@@ -18,4 +18,9 @@ struct CreateCompletionRequest: Request {
         stream: Bool,
         logprobs: Int?,
         echo: Bool,
-        stop
+        stops: [String],
+        presencePenalty: Double,
+        frequencyPenalty: Double,
+        bestOf: Int,
+        logitBias: [String: Int],
+        user: String?
