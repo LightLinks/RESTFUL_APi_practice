@@ -12,4 +12,10 @@ struct CreateCompletionRequest: Request {
         prompts: [String],
         suffix: String?,
         maxTokens: Int,
-    
+        temperature: Double,
+        topP: Double,
+        n: Int,
+        stream: Bool,
+        logprobs: Int?,
+        echo: Bool,
+        stop
