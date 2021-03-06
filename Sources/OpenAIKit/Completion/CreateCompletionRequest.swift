@@ -24,3 +24,10 @@ struct CreateCompletionRequest: Request {
         bestOf: Int,
         logitBias: [String: Int],
         user: String?
+    ) throws {
+        
+        let body = Body(
+            model: model,
+            prompts: prompts,
+            suffix: suffix,
+            maxTokens: 
