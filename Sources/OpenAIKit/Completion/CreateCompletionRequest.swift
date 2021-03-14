@@ -30,4 +30,10 @@ struct CreateCompletionRequest: Request {
             model: model,
             prompts: prompts,
             suffix: suffix,
-            maxTokens: 
+            maxTokens: maxTokens,
+            temperature: temperature,
+            topP: topP,
+            n: n,
+            stream: stream,
+            logprobs: logprobs,
+      
