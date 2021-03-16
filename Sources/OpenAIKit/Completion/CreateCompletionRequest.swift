@@ -45,4 +45,11 @@ struct CreateCompletionRequest: Request {
             user: user
         )
                 
-        self.body = .data(try Self.encod
+        self.body = .data(try Self.encoder.encode(body))
+    }
+}
+
+extension CreateCompletionRequest {
+    struct Body: Encodable {
+        let model: String
+        let prompts: [
