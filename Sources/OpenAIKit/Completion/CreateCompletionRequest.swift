@@ -36,4 +36,8 @@ struct CreateCompletionRequest: Request {
             n: n,
             stream: stream,
             logprobs: logprobs,
-      
+            echo: echo,
+            stops: stops,
+            presencePenalty: presencePenalty,
+            frequencyPenalty: frequencyPenalty,
+         
