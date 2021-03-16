@@ -40,4 +40,9 @@ struct CreateCompletionRequest: Request {
             stops: stops,
             presencePenalty: presencePenalty,
             frequencyPenalty: frequencyPenalty,
-         
+            bestOf: bestOf,
+            logitBias: logitBias,
+            user: user
+        )
+                
+        self.body = .data(try Self.encod
