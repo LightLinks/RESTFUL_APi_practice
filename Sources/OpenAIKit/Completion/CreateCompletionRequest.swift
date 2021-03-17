@@ -52,4 +52,10 @@ struct CreateCompletionRequest: Request {
 extension CreateCompletionRequest {
     struct Body: Encodable {
         let model: String
-        let prompts: [
+        let prompts: [String]
+        let suffix: String?
+        let maxTokens: Int
+        let temperature: Double
+        let topP: Double
+        let n: Int
+        let 
