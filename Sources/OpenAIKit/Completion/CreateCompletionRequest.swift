@@ -58,4 +58,9 @@ extension CreateCompletionRequest {
         let temperature: Double
         let topP: Double
         let n: Int
-        let 
+        let stream: Bool
+        let logprobs: Int?
+        let echo: Bool
+        let stops: [String]
+        let presencePenalty: Double
+      
