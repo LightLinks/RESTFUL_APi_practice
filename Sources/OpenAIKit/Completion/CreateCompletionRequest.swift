@@ -63,4 +63,9 @@ extension CreateCompletionRequest {
         let echo: Bool
         let stops: [String]
         let presencePenalty: Double
-      
+        let frequencyPenalty: Double
+        let bestOf: Int
+        let logitBias: [String: Int]
+        let user: String?
+            
+        enum CodingKeys: Coding
