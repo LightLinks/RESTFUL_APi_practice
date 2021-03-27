@@ -75,3 +75,10 @@ extension CreateCompletionRequest {
             case maxTokens
             case temperature
             case topP
+            case n
+            case stream
+            case logprobs
+            case echo
+            case stop
+            case presencePenalty
+           
