@@ -68,4 +68,10 @@ extension CreateCompletionRequest {
         let logitBias: [String: Int]
         let user: String?
             
-        enum CodingKeys: Coding
+        enum CodingKeys: CodingKey {
+            case model
+            case prompt
+            case suffix
+            case maxTokens
+            case temperature
+            case topP
