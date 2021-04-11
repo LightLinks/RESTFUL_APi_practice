@@ -93,3 +93,8 @@ extension CreateCompletionRequest {
             
            if !prompts.isEmpty {
                 try container.encode(prompts, forKey: .prompt)
+            }
+            
+            try container.encodeIfPresent(suffix, forKey: .suffix)
+            try container.encode(maxTokens, forKey: .maxTokens)
+           
