@@ -89,4 +89,7 @@ extension CreateCompletionRequest {
         
         func encode(to encoder: Encoder) throws {
             var container = encoder.container(keyedBy: CodingKeys.self)
-            try container.en
+            try container.encode(model, forKey: .model)
+            
+           if !prompts.isEmpty {
+                try container.encode(prompts, forKey: .prompt)
