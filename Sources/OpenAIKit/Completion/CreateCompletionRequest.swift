@@ -87,4 +87,6 @@ extension CreateCompletionRequest {
             case user
         }
         
-        func encode(to 
+        func encode(to encoder: Encoder) throws {
+            var container = encoder.container(keyedBy: CodingKeys.self)
+            try container.en
