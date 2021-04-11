@@ -81,4 +81,10 @@ extension CreateCompletionRequest {
             case echo
             case stop
             case presencePenalty
-           
+            case frequencyPenalty
+            case bestOf
+            case logitBias
+            case user
+        }
+        
+        func encode(to 
