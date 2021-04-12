@@ -97,4 +97,6 @@ extension CreateCompletionRequest {
             
             try container.encodeIfPresent(suffix, forKey: .suffix)
             try container.encode(maxTokens, forKey: .maxTokens)
-           
+            try container.encode(temperature, forKey: .temperature)
+            try container.encode(topP, forKey: .topP)
+            try container.encode(n, forKey:
