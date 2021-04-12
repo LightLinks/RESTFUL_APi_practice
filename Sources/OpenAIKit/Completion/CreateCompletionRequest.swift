@@ -102,4 +102,8 @@ extension CreateCompletionRequest {
             try container.encode(n, forKey: .n)
             try container.encode(stream, forKey: .stream)
             try container.encodeIfPresent(logprobs, forKey: .logprobs)
-          
+            try container.encode(echo, forKey: .echo)
+            
+            if !stops.isEmpty {
+                try container.encode(stops, forKey: .stop)
+            }
