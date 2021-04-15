@@ -109,4 +109,8 @@ extension CreateCompletionRequest {
             }
             
             try container.encode(presencePenalty, forKey: .presencePenalty)
-            try container.encode(frequencyPenalty, 
+            try container.encode(frequencyPenalty, forKey: .frequencyPenalty)
+            try container.encode(bestOf, forKey: .bestOf)
+            
+            if !logitBias.isEmpty {
+                try containe
