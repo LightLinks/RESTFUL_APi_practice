@@ -107,3 +107,6 @@ extension CreateCompletionRequest {
             if !stops.isEmpty {
                 try container.encode(stops, forKey: .stop)
             }
+            
+            try container.encode(presencePenalty, forKey: .presencePenalty)
+            try container.encode(frequencyPenalty, 
