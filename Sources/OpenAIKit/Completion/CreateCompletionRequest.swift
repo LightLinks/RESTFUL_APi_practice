@@ -113,4 +113,10 @@ extension CreateCompletionRequest {
             try container.encode(bestOf, forKey: .bestOf)
             
             if !logitBias.isEmpty {
-                try containe
+                try container.encode(logitBias, forKey: .logitBias)
+            }
+            
+            try container.encodeIfPresent(user, forKey: .user)
+        }
+    }
+}
