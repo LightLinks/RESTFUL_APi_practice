@@ -5,4 +5,7 @@ public struct Configuration {
     public let organization: String?
     
     var headers: HTTPHeaders {
-        var 
+        var headers = HTTPHeaders()
+        headers.add(name: "Authorization", value: "Bearer \(apiKey)")
+
+        if let organization = organ
