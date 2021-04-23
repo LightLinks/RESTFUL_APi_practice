@@ -8,4 +8,10 @@ public struct Configuration {
         var headers = HTTPHeaders()
         headers.add(name: "Authorization", value: "Bearer \(apiKey)")
 
-        if let organization = organ
+        if let organization = organization {
+            headers.add(name: "OpenAI-Organization", value: organization)
+        }
+        
+        return headers
+    }
+    
