@@ -15,3 +15,12 @@ public struct Configuration {
         return headers
     }
     
+    public init(
+        apiKey: String,
+        organization: String? = nil
+    ) {
+        self.apiKey = apiKey
+        self.organization = organization
+    }
+    
+}
