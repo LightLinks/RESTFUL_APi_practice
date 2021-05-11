@@ -14,4 +14,9 @@ public struct EditProvider {
 
      Creates a new edit for the provided input, instruction, and parameters
      */
-    public func cr
+    public func create(
+        model: ModelID = Model.GPT3.textDavinciEdit001,
+        input: String = "",
+        instruction: String,
+        n: Int = 1,
+        temper
