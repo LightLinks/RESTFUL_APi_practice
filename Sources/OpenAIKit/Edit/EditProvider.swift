@@ -10,4 +10,8 @@ public struct EditProvider {
      Create edit
      POST
       
-     https:
+     https://api.openai.com/v1/edits
+
+     Creates a new edit for the provided input, instruction, and parameters
+     */
+    public func cr
