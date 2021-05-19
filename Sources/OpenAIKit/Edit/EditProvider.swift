@@ -24,4 +24,9 @@ public struct EditProvider {
     ) async throws -> Edit {
         
         let request = try CreateEditRequest(
-            mo
+            model: model.id,
+            input: input,
+            instruction: instruction,
+            n: n,
+            temperature: temperature,
+     
