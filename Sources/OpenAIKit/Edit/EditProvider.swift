@@ -29,4 +29,10 @@ public struct EditProvider {
             instruction: instruction,
             n: n,
             temperature: temperature,
-     
+            topP: topP
+        )
+        
+        return try await requestHandler.perform(request: request)
+    }
+    
+}
