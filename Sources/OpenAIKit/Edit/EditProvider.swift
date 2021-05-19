@@ -19,4 +19,9 @@ public struct EditProvider {
         input: String = "",
         instruction: String,
         n: Int = 1,
-        temper
+        temperature: Double = 1.0,
+        topP: Double = 1.0
+    ) async throws -> Edit {
+        
+        let request = try CreateEditRequest(
+            mo
