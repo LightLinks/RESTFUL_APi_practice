@@ -4,4 +4,12 @@ import Foundation
 
 struct CreateEmbeddingRequest: Request {
     let method: HTTPMethod = .POST
-    let path = "/v1/embeddin
+    let path = "/v1/embeddings"
+    let body: HTTPClient.Body?
+    
+    init(
+        model: String,
+        input: String,
+        user: String?
+    ) throws {
+       
