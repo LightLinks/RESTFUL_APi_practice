@@ -12,4 +12,11 @@ struct CreateEmbeddingRequest: Request {
         input: String,
         user: String?
     ) throws {
-       
+        
+        let body = Body(
+            model: model,
+            input: input,
+            user: user
+        )
+                
+        self.body = .data(
