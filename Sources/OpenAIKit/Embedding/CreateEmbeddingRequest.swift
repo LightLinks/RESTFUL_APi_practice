@@ -19,4 +19,11 @@ struct CreateEmbeddingRequest: Request {
             user: user
         )
                 
-        self.body = .data(
+        self.body = .data(try Self.encoder.encode(body))
+    }
+}
+
+extension CreateEmbeddingRequest {
+    struct Body: Encodable {
+        let model: String
+        let in
