@@ -26,4 +26,7 @@ struct CreateEmbeddingRequest: Request {
 extension CreateEmbeddingRequest {
     struct Body: Encodable {
         let model: String
-        let in
+        let input: String
+        let user: String?
+    }
+}
