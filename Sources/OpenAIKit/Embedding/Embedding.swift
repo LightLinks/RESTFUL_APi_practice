@@ -6,4 +6,7 @@ import Foundation
 public struct Embedding {
     public let object: String
     public let embedding: [Float]
-    public let 
+    public let index: Int
+}
+
+extension Embedding: Codable {}
