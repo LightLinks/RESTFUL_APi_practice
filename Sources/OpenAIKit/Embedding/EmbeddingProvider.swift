@@ -15,4 +15,9 @@ public struct EmbeddingProvider {
      Creates an embedding vector representing the input text.
      */
     public func create(
-        model: ModelID = M
+        model: ModelID = Model.GPT3.textEmbeddingAda001,
+        input: String,
+        user: String? = nil
+    ) async throws -> CreateEmbeddingResponse {
+        
+        let request =
