@@ -26,4 +26,7 @@ public struct EmbeddingProvider {
             user: user
         )
         
-        return try 
+        return try await requestHandler.perform(request: request)
+    }
+    
+}
