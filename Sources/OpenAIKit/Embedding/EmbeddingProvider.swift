@@ -20,4 +20,10 @@ public struct EmbeddingProvider {
         user: String? = nil
     ) async throws -> CreateEmbeddingResponse {
         
-        let request =
+        let request = try CreateEmbeddingRequest(
+            model: model.id,
+            input: input,
+            user: user
+        )
+        
+        return try 
