@@ -18,3 +18,10 @@ extension File {
     public enum Purpose: String {
         case fineTune = "fine-tune"
         case answers
+        case search
+        case classifications
+    }
+}
+
+extension File: Codable {}
+extension File.Purpose: Codable {}
