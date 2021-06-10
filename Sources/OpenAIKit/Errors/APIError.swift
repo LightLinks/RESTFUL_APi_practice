@@ -8,4 +8,7 @@ public struct APIError: Error, Decodable {
 }
 
 public struct APIErrorResponse: Error, Decodable {
-    
+    public let error: APIError
+}
+
+
