@@ -14,4 +14,7 @@ public struct FileProvider {
       
      https://api.openai.com/v1/files
 
-     Retur
+     Returns a list of files that belong to the user's organization.
+     */
+    public func list() async throws -> [File] {
+        let request = ListFilesReques
