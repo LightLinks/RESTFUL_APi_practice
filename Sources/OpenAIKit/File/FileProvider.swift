@@ -17,4 +17,11 @@ public struct FileProvider {
      Returns a list of files that belong to the user's organization.
      */
     public func list() async throws -> [File] {
-        let request = ListFilesReques
+        let request = ListFilesRequest()
+        
+        let response: ListFilesResponse = try await requestHandler.perform(request: request)
+        
+        return response.data
+    }
+    
+    /**
