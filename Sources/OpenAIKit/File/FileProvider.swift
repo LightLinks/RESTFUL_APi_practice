@@ -25,3 +25,9 @@ public struct FileProvider {
     }
     
     /**
+     Upload file
+     POST
+      
+     https://api.openai.com/v1/files
+
+     Upload a file that contains document(s) to be used across vario
