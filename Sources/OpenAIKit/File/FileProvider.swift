@@ -30,4 +30,10 @@ public struct FileProvider {
       
      https://api.openai.com/v1/files
 
-     Upload a file that contains document(s) to be used across various endpoints/features. Currently, the size of all the files uploaded by one organization can be up to 1 GB. Please contact us if you need to increase the 
+     Upload a file that contains document(s) to be used across various endpoints/features. Currently, the size of all the files uploaded by one organization can be up to 1 GB. Please contact us if you need to increase the storage limit.
+     */
+    public func upload(
+        file: Data,
+        fileName: String = "data.jsonl",
+        purpose: File.Purpose
+    ) async throws -> File
