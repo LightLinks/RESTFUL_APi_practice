@@ -36,4 +36,9 @@ public struct FileProvider {
         file: Data,
         fileName: String = "data.jsonl",
         purpose: File.Purpose
-    ) async throws -> File
+    ) async throws -> File {
+        
+        let request = try UploadFileRequest(
+            file: file,
+            fileName: fileName,
+            purpose: pu
