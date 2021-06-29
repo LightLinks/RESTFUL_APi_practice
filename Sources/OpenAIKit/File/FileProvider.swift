@@ -41,4 +41,14 @@ public struct FileProvider {
         let request = try UploadFileRequest(
             file: file,
             fileName: fileName,
-            purpose: pu
+            purpose: purpose
+        )
+        
+        return try await requestHandler.perform(request: request)
+    }
+    
+    /**
+     Delete file
+     DELETE
+      
+    
