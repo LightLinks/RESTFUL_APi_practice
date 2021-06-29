@@ -55,4 +55,8 @@ public struct FileProvider {
 
      Delete a file.
      */
-    public func delete(id: String) async throws -> DeleteFileRespons
+    public func delete(id: String) async throws -> DeleteFileResponse {
+        let request = DeleteFileRequest(id: id)
+        
+        return try await requestHandler.perform(request: request)
+    
