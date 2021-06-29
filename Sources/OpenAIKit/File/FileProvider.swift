@@ -51,4 +51,8 @@ public struct FileProvider {
      Delete file
      DELETE
       
-    
+     https://api.openai.com/v1/files/{file_id}
+
+     Delete a file.
+     */
+    public func delete(id: String) async throws -> DeleteFileRespons
