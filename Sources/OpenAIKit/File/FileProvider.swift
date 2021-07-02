@@ -69,4 +69,7 @@ public struct FileProvider {
 
      Returns information about a specific file.
      */
-    p
+    public func retrieve(id: String) async throws -> File {
+        let request = RetrieveFileRequest(id: id)
+        
+        return try await reques
