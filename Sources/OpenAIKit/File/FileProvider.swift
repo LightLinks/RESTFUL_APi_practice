@@ -59,4 +59,14 @@ public struct FileProvider {
         let request = DeleteFileRequest(id: id)
         
         return try await requestHandler.perform(request: request)
+    }
     
+    /**
+     Retrieve file
+     GET
+      
+     https://api.openai.com/v1/files/{file_id}
+
+     Returns information about a specific file.
+     */
+    p
