@@ -72,4 +72,11 @@ public struct FileProvider {
     public func retrieve(id: String) async throws -> File {
         let request = RetrieveFileRequest(id: id)
         
-        return try await reques
+        return try await requestHandler.perform(request: request)
+    }
+    
+    /**
+     Retrieve file content
+     GET
+      
+     https://api.openai.com/v1/
