@@ -86,4 +86,7 @@ public struct FileProvider {
     public func retrieveFileContent(id: String) async throws -> Data {
         let request = RetrieveFileContentRequest(id: id)
         
-        return try await requestHandler.perform(request
+        return try await requestHandler.perform(request: request)
+    }
+    
+}
