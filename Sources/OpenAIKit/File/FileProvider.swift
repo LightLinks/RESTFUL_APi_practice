@@ -79,4 +79,8 @@ public struct FileProvider {
      Retrieve file content
      GET
       
-     https://api.openai.com/v1/
+     https://api.openai.com/v1/files/{file_id}/content
+
+     Returns the contents of the specified file
+     */
+    public func retrieveFileContent(id: String) async throw
