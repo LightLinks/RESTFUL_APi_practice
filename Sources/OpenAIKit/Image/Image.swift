@@ -9,4 +9,9 @@ extension Image: Decodable {}
 extension Image {
     public enum Size: String {
         case twoFiftySix = "256x256"
-        case fiveTw
+        case fiveTwelve = "512x512"
+        case tenTwentyFour = "1024x1024"
+    }
+}
+
+extension Image.Size: Codable {}
