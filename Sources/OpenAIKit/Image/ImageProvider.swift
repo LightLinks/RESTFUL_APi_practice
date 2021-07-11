@@ -49,3 +49,43 @@ public struct ImageProvider {
         n: Int = 1,
         size: Image.Size = .tenTwentyFour,
         user: String? = nil
+    ) async throws -> ImageResponse {
+        
+        let request = try CreateImageEditRequest(
+            image: image,
+            mask: mask,
+            prompt: prompt,
+            n: n,
+            size: size,
+            user: user
+        )
+        
+        return try await requestHandler.perform(request: request)
+    }
+    
+    /**
+     Create image variation
+     POST
+      
+     https://api.openai.com/v1/images/variations
+
+     Creates a variation of a given image.
+     */
+    public func createVariation(
+        image: Data,
+        n: Int = 1,
+        size: Image.Size = .tenTwentyFour,
+        user: String? = nil
+    ) async throws -> ImageResponse {
+        
+        let request = try CreateImageVariationRequest(
+            image: image,
+            n: n,
+            size: size,
+            user: user
+        )
+        
+        return try await requestHandler.perform(request: request)
+    }
+    
+}
