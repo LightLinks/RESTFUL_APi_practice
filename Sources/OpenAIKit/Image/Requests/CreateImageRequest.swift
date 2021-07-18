@@ -14,4 +14,11 @@ struct CreateImageRequest: Request {
         user: String?
     ) throws {
         
- 
+        let body = Body(
+            prompt: prompt,
+            n: n,
+            size: size,
+            user: user
+        )
+                
+        self.b
