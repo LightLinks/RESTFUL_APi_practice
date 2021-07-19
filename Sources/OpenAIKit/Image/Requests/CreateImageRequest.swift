@@ -29,4 +29,7 @@ extension CreateImageRequest {
     struct Body: Encodable {
         let prompt: String
         let n: Int
-        let si
+        let size: Image.Size
+        let user: String?
+    }
+}
