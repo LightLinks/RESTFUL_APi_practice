@@ -21,4 +21,12 @@ struct CreateImageRequest: Request {
             user: user
         )
                 
-        self.b
+        self.body = .data(try Self.encoder.encode(body))
+    }
+}
+
+extension CreateImageRequest {
+    struct Body: Encodable {
+        let prompt: String
+        let n: Int
+        let si
