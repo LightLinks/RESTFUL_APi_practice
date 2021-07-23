@@ -10,4 +10,15 @@ struct CreateImageVariationRequest: Request {
     
     var headers: HTTPHeaders {
         var headers = HTTPHeaders()
-        headers.add(name: "Content-Type", value: "multipart/form-data; boundary=\(bo
+        headers.add(name: "Content-Type", value: "multipart/form-data; boundary=\(boundary)")
+        return headers
+    }
+    
+    init(
+        image: Data,
+        n: Int,
+        size: Image.Size,
+        user: String?
+    ) throws {
+        
+        let bu
