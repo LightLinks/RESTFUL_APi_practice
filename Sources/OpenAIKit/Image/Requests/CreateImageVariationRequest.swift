@@ -21,4 +21,8 @@ struct CreateImageVariationRequest: Request {
         user: String?
     ) throws {
         
-        let bu
+        let builder = MultipartFormDataBuilder(boundary: boundary)
+        
+        builder.addDataField(
+            fieldName:  "image",
+            f
