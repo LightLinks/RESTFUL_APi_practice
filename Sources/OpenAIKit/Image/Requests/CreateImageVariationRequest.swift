@@ -25,4 +25,9 @@ struct CreateImageVariationRequest: Request {
         
         builder.addDataField(
             fieldName:  "image",
-            f
+            fileName: "image.png",
+            data: image,
+            mimeType: "image/png"
+        )
+        
+        builder.addTextField(named: "n", value: "\(n)"
