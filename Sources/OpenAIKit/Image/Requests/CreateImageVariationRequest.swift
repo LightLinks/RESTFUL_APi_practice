@@ -30,4 +30,8 @@ struct CreateImageVariationRequest: Request {
             mimeType: "image/png"
         )
         
-        builder.addTextField(named: "n", value: "\(n)"
+        builder.addTextField(named: "n", value: "\(n)")
+        builder.addTextField(named: "size", value: size.rawValue)
+        
+        if let user = user {
+            builder.addTextField(named: "use
