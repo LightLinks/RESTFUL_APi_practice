@@ -34,4 +34,9 @@ struct CreateImageVariationRequest: Request {
         builder.addTextField(named: "size", value: size.rawValue)
         
         if let user = user {
-            builder.addTextField(named: "use
+            builder.addTextField(named: "user", value: user)
+        }
+
+        self.body = .data(builder.build())
+    }
+}
