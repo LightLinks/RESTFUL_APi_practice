@@ -6,4 +6,11 @@ import Foundation
  */
 
 public struct Moderation {
-    public let 
+    public let id: String
+    public let model: String
+    public let results: [Moderation.Result]
+}
+
+extension Moderation {
+    public struct Result {
+     
