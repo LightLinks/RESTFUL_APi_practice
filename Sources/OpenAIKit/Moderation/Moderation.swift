@@ -13,4 +13,9 @@ public struct Moderation {
 
 extension Moderation {
     public struct Result {
-     
+        public let categories: Categories
+        public let categoryScores: CategoryScores
+        public let flagged: Bool
+    }
+    
+    public enum Mo
