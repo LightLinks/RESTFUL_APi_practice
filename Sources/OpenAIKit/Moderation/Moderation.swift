@@ -18,4 +18,10 @@ extension Moderation {
         public let flagged: Bool
     }
     
-    public enum Mo
+    public enum Model: String, Codable {
+        case latest = "text-moderation-latest"
+        case stable = "text-moderation-stable"
+    }
+}
+
+extension Mod
