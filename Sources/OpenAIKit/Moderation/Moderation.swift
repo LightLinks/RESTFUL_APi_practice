@@ -29,4 +29,7 @@ extension Moderation.Result {
         public let hate: Bool
         public let hateThreatening: Bool
         public let selfHarm: Bool
-     
+        public let sexual: Bool
+        public let sexualMinors: Bool
+        public let violence: Bool
+        public let violenceGra
