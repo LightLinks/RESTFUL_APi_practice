@@ -24,4 +24,9 @@ extension Moderation {
     }
 }
 
-extension Mod
+extension Moderation.Result {
+    public struct Categories {
+        public let hate: Bool
+        public let hateThreatening: Bool
+        public let selfHarm: Bool
+     
