@@ -32,4 +32,10 @@ extension Moderation.Result {
         public let sexual: Bool
         public let sexualMinors: Bool
         public let violence: Bool
-        public let violenceGra
+        public let violenceGraphic: Bool
+    }
+    
+    public struct CategoryScores {
+        public let hate: Float
+        public let hateThreatening: Float
+    
