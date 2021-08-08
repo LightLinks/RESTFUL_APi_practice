@@ -42,4 +42,11 @@ extension Moderation.Result {
         public let sexual: Float
         public let sexualMinors: Float
         public let violence: Float
-        public
+        public let violenceGraphic: Float
+    }
+}
+
+extension Moderation: Decodable {}
+extension Moderation.Result: Decodable {}
+
+enum ModerationCategoryCodi
