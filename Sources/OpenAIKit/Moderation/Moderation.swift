@@ -49,4 +49,9 @@ extension Moderation.Result {
 extension Moderation: Decodable {}
 extension Moderation.Result: Decodable {}
 
-enum ModerationCategoryCodi
+enum ModerationCategoryCodingKeys: String, CodingKey {
+    case hate
+    case hateThreatening = "hate/threatening"
+    case selfHarm = "self-harm"
+    case sexual
+    case sexualMinors = "sexual/min
