@@ -54,4 +54,11 @@ enum ModerationCategoryCodingKeys: String, CodingKey {
     case hateThreatening = "hate/threatening"
     case selfHarm = "self-harm"
     case sexual
-    case sexualMinors = "sexual/min
+    case sexualMinors = "sexual/minors"
+    case violence
+    case violenceGraphic = "violence/graphic"
+}
+
+extension Moderation.Result.Categories: Decodable {
+    public init(from decoder: Decoder) throws {
+        
