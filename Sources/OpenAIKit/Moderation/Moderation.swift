@@ -61,4 +61,5 @@ enum ModerationCategoryCodingKeys: String, CodingKey {
 
 extension Moderation.Result.Categories: Decodable {
     public init(from decoder: Decoder) throws {
-        
+        let container = try decoder.container(keyedBy: ModerationCategoryCodingKeys.self)
+        self.hate = try container.decode(Bool.self, forK
