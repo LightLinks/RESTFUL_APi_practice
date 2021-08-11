@@ -66,4 +66,6 @@ extension Moderation.Result.Categories: Decodable {
         self.hateThreatening = try container.decode(Bool.self, forKey: .hateThreatening)
         self.selfHarm = try container.decode(Bool.self, forKey: .selfHarm)
         self.sexual = try container.decode(Bool.self, forKey: .sexual)
-        self.sexualMinors = try container.decode(Bool.self, forKe
+        self.sexualMinors = try container.decode(Bool.self, forKey: .sexualMinors)
+        self.violence = try container.decode(Bool.self, forKey: .violence)
+        self.violenceGraphic = try container.decode(Bool.self, forK
