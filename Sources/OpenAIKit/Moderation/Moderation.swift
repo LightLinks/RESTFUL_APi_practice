@@ -64,4 +64,6 @@ extension Moderation.Result.Categories: Decodable {
         let container = try decoder.container(keyedBy: ModerationCategoryCodingKeys.self)
         self.hate = try container.decode(Bool.self, forKey: .hate)
         self.hateThreatening = try container.decode(Bool.self, forKey: .hateThreatening)
-        self.selfHarm = try container.decode(Bool.self,
+        self.selfHarm = try container.decode(Bool.self, forKey: .selfHarm)
+        self.sexual = try container.decode(Bool.self, forKey: .sexual)
+        self.sexualMinors = try container.decode(Bool.self, forKe
