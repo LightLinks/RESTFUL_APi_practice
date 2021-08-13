@@ -68,4 +68,10 @@ extension Moderation.Result.Categories: Decodable {
         self.sexual = try container.decode(Bool.self, forKey: .sexual)
         self.sexualMinors = try container.decode(Bool.self, forKey: .sexualMinors)
         self.violence = try container.decode(Bool.self, forKey: .violence)
-        self.violenceGraphic = try container.decode(Bool.self, forK
+        self.violenceGraphic = try container.decode(Bool.self, forKey: .violenceGraphic)
+    }
+}
+
+extension Moderation.Result.CategoryScores: Decodable {
+    public init(from decoder: Decoder) throws {
+        let c
