@@ -76,4 +76,6 @@ extension Moderation.Result.CategoryScores: Decodable {
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: ModerationCategoryCodingKeys.self)
         self.hate = try container.decode(Float.self, forKey: .hate)
-        self
+        self.hateThreatening = try container.decode(Float.self, forKey: .hateThreatening)
+        self.selfHarm = try container.decode(Float.self, forKey: .selfHarm)
+        self.sexua
