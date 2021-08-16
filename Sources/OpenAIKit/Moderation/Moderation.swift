@@ -79,4 +79,6 @@ extension Moderation.Result.CategoryScores: Decodable {
         self.hateThreatening = try container.decode(Float.self, forKey: .hateThreatening)
         self.selfHarm = try container.decode(Float.self, forKey: .selfHarm)
         self.sexual = try container.decode(Float.self, forKey: .sexual)
-        self.sexualMinors = try container.decode(Float.self, forKey: .sexualMinor
+        self.sexualMinors = try container.decode(Float.self, forKey: .sexualMinors)
+        self.violence = try container.decode(Float.self, forKey: .violence)
+        self.violenceGraphic = try container.decode(Float.self, forKey: .viol
