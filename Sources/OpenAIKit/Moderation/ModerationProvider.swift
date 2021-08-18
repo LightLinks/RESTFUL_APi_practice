@@ -10,4 +10,10 @@ public struct ModerationProvider {
      Create moderation
      POST
       
-     https://api.openai.co
+     https://api.openai.com/v1/moderations
+
+     Classifies if text violates OpenAI's Content Policy
+     */
+    public func createModeration(
+        input: String,
+        model: Moderati
