@@ -16,4 +16,9 @@ public struct ModerationProvider {
      */
     public func createModeration(
         input: String,
-        model: Moderati
+        model: Moderation.Model = .latest
+    ) async throws -> Moderation {
+        
+        let request = try CreateModerationRequest(
+            input: input,
+   
