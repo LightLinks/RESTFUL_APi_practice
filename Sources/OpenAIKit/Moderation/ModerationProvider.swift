@@ -21,4 +21,9 @@ public struct ModerationProvider {
         
         let request = try CreateModerationRequest(
             input: input,
-   
+            model: model
+        )
+        
+        return try await requestHandler.perform(request: request)
+    }
+}
