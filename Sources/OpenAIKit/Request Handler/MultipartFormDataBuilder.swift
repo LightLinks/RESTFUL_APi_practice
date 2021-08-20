@@ -23,3 +23,44 @@ struct MultipartFormDataBuilder {
         return fieldString
     }
     
+    func addDataField(fieldName: String, fileName: String, data: Data, mimeType: String) {
+        httpBody.append(
+            dataFormField(
+                fieldName: fieldName,
+                fileName:fileName,
+                data: data,
+                mimeType: mimeType
+            )
+        )
+    }
+    
+    private func dataFormField(
+        fieldName: String,
+        fileName: String,
+        data: Data,
+        mimeType: String
+    ) -> Data {
+        
+        var fieldData = Data("--\(boundary)\r\n".utf8)
+        
+        fieldData += Data("Content-Disposition: form-data; name=\"\(fieldName)\"; filename=\"\(fileName)\"\r\n".utf8)
+        fieldData += Data("Content-Type: \(mimeType)\r\n".utf8)
+        fieldData += Data("\r\n".utf8)
+        fieldData += data
+        fieldData += Data("\r\n".utf8)
+        return fieldData
+    }
+    
+    func build() -> Data {
+        httpBody.append(Data("--\(boundary)--".utf8))
+        return httpBody as Data
+    }
+}
+
+extension NSMutableData {
+    func appendString(_ string: String) {
+        if let data = string.data(using: .utf8) {
+            self.append(data)
+        }
+    }
+}
