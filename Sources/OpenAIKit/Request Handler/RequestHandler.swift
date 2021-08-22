@@ -62,3 +62,8 @@ struct RequestHandler {
             return try decoder.decode(T.self, from: byteBuffer)
         } catch {
             print(error)
+            throw try decoder.decode(APIErrorResponse.self, from: byteBuffer)
+        }
+                    
+    }
+}
