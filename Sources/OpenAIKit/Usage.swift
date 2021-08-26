@@ -8,4 +8,6 @@ public struct Usage {
 
 extension Usage: Codable {
     public init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKe
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.promptTokens = try container.decodeIfPresent(Int.self, forKey: .promptTokens) ?? 0
+        self.completionTokens = try container.
