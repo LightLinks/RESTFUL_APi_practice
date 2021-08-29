@@ -5,4 +5,9 @@ import AsyncHTTPClient
 final class OpenAIKitTests: XCTestCase {
     
     private var httpClient: HTTPClient!
-    private v
+    private var client: Client!
+    
+    override func setUp() {
+        httpClient = HTTPClient(eventLoopGroupProvider: .createNew)
+        
+        let c
