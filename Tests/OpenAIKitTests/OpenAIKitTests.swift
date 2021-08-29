@@ -10,4 +10,8 @@ final class OpenAIKitTests: XCTestCase {
     override func setUp() {
         httpClient = HTTPClient(eventLoopGroupProvider: .createNew)
         
-        let c
+        let configuration = Configuration(apiKey: "YOUR-API-KEY")
+        
+        client = Client(
+            httpClient: httpClient,
+            configuration: c
