@@ -23,3 +23,8 @@ final class OpenAIKitTests: XCTestCase {
     }
     
     func test_error() async throws {
+        do {
+            _ = try await client.files.retrieve(id: "NOT-VALID-ID")
+        } catch {
+            print(error)
+        
