@@ -14,4 +14,12 @@ final class OpenAIKitTests: XCTestCase {
         
         client = Client(
             httpClient: httpClient,
-            configuration: c
+            configuration: configuration
+        )
+    }
+    
+    override func tearDown() async throws {
+        try await httpClient.shutdown()
+    }
+    
+    func test_error() async throws {
