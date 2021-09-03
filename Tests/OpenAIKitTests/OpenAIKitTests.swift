@@ -34,4 +34,8 @@ final class OpenAIKitTests: XCTestCase {
     func test_listModels() async throws {
         let models = try await client.models.list()
         print(models)
-   
+    }
+    
+    func test_retrieveModel() async throws {
+        let models = try await client.models.retrieve(id: Model.GPT3.davinci.id)
+        p
