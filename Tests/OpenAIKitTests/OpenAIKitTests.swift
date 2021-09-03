@@ -27,4 +27,11 @@ final class OpenAIKitTests: XCTestCase {
             _ = try await client.files.retrieve(id: "NOT-VALID-ID")
         } catch {
             print(error)
+        }
         
+    }
+    
+    func test_listModels() async throws {
+        let models = try await client.models.list()
+        print(models)
+   
