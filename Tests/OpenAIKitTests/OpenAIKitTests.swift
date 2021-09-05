@@ -43,4 +43,11 @@ final class OpenAIKitTests: XCTestCase {
     
     func test_createCompletion() async throws {
         let completion = try await client.completions.create(
-            m
+            model: Model.GPT3.davinci,
+            prompts: ["Write a haiku"]
+        )
+        
+        print(completion)
+    }
+    
+    func test_createChat() asyn
