@@ -50,4 +50,8 @@ final class OpenAIKitTests: XCTestCase {
         print(completion)
     }
     
-    func test_createChat() asyn
+    func test_createChat() async throws {
+        let completion = try await client.chats.create(
+            model: Model.GPT3.gpt3_5Turbo,
+            messages: [
+     
