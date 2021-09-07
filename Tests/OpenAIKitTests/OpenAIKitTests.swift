@@ -54,4 +54,11 @@ final class OpenAIKitTests: XCTestCase {
         let completion = try await client.chats.create(
             model: Model.GPT3.gpt3_5Turbo,
             messages: [
-     
+                Chat.Message(
+                    role: "user",
+                    content: "Write a haiku"
+                )
+            ]
+        )
+        
+        prin
