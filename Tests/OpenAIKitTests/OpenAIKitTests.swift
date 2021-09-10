@@ -67,4 +67,11 @@ final class OpenAIKitTests: XCTestCase {
     func test_createEdit() async throws {
         let edit = try await client.edits.create(
             input: "Whay day of the wek is it?",
-   
+            instruction: "Fix the spelling mistakes"
+        )
+        
+        print(edit)
+    }
+    
+    func test_createImage() async throws {
+        le
