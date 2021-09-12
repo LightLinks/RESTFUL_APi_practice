@@ -74,4 +74,9 @@ final class OpenAIKitTests: XCTestCase {
     }
     
     func test_createImage() async throws {
-        le
+        let image = try await client.images.create(prompt: "Tiger Woods eating soup")
+        
+        print(image)
+    }
+    
+    func test_createEdi
