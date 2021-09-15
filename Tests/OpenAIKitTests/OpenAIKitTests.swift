@@ -79,4 +79,9 @@ final class OpenAIKitTests: XCTestCase {
         print(image)
     }
     
-    func test_createEdi
+    func test_createEditImage() async throws {
+        let url = Bundle.module.url(forResource: "logo", withExtension: "png")!
+        
+        let data = try Data(contentsOf: url)
+        
+        
