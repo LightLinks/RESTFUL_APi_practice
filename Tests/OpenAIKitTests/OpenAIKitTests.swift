@@ -84,4 +84,7 @@ final class OpenAIKitTests: XCTestCase {
         
         let data = try Data(contentsOf: url)
         
-        
+        let image = try await client.images.createEdit(
+            image: data,
+            mask: data,
+            prompt: "Change background color to blu
