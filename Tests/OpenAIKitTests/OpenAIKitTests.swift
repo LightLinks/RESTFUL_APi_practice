@@ -94,4 +94,9 @@ final class OpenAIKitTests: XCTestCase {
     }
     
     func test_createImageVariation() async throws {
-        let url = Bundle.module.url(forResource:
+        let url = Bundle.module.url(forResource: "logo", withExtension: "png")!
+        
+        let data = try Data(contentsOf: url)
+        
+        let image = try await client.images.createVariation(image: data)
+ 
