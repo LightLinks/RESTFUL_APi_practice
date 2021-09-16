@@ -87,4 +87,11 @@ final class OpenAIKitTests: XCTestCase {
         let image = try await client.images.createEdit(
             image: data,
             mask: data,
-            prompt: "Change background color to blu
+            prompt: "Change background color to blue"
+        )
+        
+        print(image)
+    }
+    
+    func test_createImageVariation() async throws {
+        let url = Bundle.module.url(forResource:
