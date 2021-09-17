@@ -99,4 +99,9 @@ final class OpenAIKitTests: XCTestCase {
         let data = try Data(contentsOf: url)
         
         let image = try await client.images.createVariation(image: data)
- 
+        
+        print(image)
+    }
+    
+    func test_createEmbedding() async throws {
+        let embedding = try await client.embeddings.
