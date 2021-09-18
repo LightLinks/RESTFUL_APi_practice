@@ -110,4 +110,10 @@ final class OpenAIKitTests: XCTestCase {
     }
     
     func test_listFiles() async throws {
-        let files = try
+        let files = try await client.files.list()
+        
+        print(files)
+    }
+    
+    func test_uploadFile() async throws {
+        let url = Bundle.module.url(forResource: "example", w
