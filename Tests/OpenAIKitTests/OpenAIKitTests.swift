@@ -104,4 +104,10 @@ final class OpenAIKitTests: XCTestCase {
     }
     
     func test_createEmbedding() async throws {
-        let embedding = try await client.embeddings.
+        let embedding = try await client.embeddings.create(input: "he food was delicious and the waiter...")
+        
+        print(embedding)
+    }
+    
+    func test_listFiles() async throws {
+        let files = try
