@@ -116,4 +116,9 @@ final class OpenAIKitTests: XCTestCase {
     }
     
     func test_uploadFile() async throws {
-        let url = Bundle.module.url(forResource: "example", w
+        let url = Bundle.module.url(forResource: "example", withExtension: "jsonl")!
+        
+        let data = try Data(contentsOf: url)
+        
+        let file = try await client.files.upload(
+            file: data,
