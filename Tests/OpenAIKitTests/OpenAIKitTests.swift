@@ -129,4 +129,11 @@ final class OpenAIKitTests: XCTestCase {
         print(file)
     }
     
-    func test_deleteFil
+    func test_deleteFile() async throws {
+        let response = try await client.files.delete(id: "FILE-ID")
+        
+        print(response)
+    }
+    
+    func test_retrieveFile() async throws {
+     
