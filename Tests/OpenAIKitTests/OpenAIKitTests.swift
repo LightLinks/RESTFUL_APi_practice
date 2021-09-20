@@ -122,3 +122,11 @@ final class OpenAIKitTests: XCTestCase {
         
         let file = try await client.files.upload(
             file: data,
+            fileName: "test.jsonl",
+            purpose: .answers
+        )
+        
+        print(file)
+    }
+    
+    func test_deleteFil
