@@ -141,4 +141,10 @@ final class OpenAIKitTests: XCTestCase {
         print(file)
     }
     
-    func test_retrieveFile
+    func test_retrieveFileContent() async throws {
+        let file = try await client.files.retrieveFileContent(id: "FILE-ID")
+        
+        print(file)
+    }
+    
+    func test_createModera
