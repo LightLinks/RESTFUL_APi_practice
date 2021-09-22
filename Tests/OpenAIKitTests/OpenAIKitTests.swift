@@ -136,4 +136,9 @@ final class OpenAIKitTests: XCTestCase {
     }
     
     func test_retrieveFile() async throws {
-     
+        let file = try await client.files.retrieve(id: "FILE-ID")
+        
+        print(file)
+    }
+    
+    func test_retrieveFile
