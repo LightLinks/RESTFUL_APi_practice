@@ -147,4 +147,7 @@ final class OpenAIKitTests: XCTestCase {
         print(file)
     }
     
-    func test_createModera
+    func test_createModeration() async throws {
+        let moderation = try await client.moderations.createModeration(input: "I want to kill them.")
+        
+        print(
